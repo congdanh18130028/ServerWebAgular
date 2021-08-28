@@ -1,0 +1,19 @@
+<div>
+    <form [formGroup]="form" (ngSubmit)="submit()">
+            <div>
+                <div>
+                    <img style="width: 200px; height: 200px;" [src]="url" alt="">
+                </div>
+
+                <div style=" text-align: center; display: block; margin: 0 auto;">
+
+                    <input id="select-img" hidden formControlName="imgPath" (change)="onSelectFile($event)" mat-button type="file"
+                        accept="image/*">
+                        <label  class="mat-focus-indicator mat-button mat-button-base mat-primary" for="select-img">Choose file</label>
+                </div>
+            </div>
+        <div>
+            <button color ="primary" type="submit" mat-raised-button>Submit</button>
+        </div>
+    </form>
+</div>

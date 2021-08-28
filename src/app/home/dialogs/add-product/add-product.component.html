@@ -1,0 +1,86 @@
+<div>
+    <form [formGroup]="form" (ngSubmit)="submit()">
+        <div style="display: flex;">
+
+            <div style="margin-right: 1rem;">
+                <div>
+                    <mat-form-field>
+                        <input matInput placeholder="Tên sản phẩm" formControlName="name" required>
+                    </mat-form-field>
+                </div>
+
+                <!-- <div  *ngIf="f.name.invalid">
+
+                    <div *ngIf="f.name.errors?.required && (f.name.dirty || f.name.touched)">
+                        Tên sản phẩm trống
+                    </div>
+                </div> -->
+
+             
+                <div style="display: flex;">
+                    <div>
+                        <mat-form-field>
+                            <mat-label>Loại</mat-label>
+                            <mat-select formControlName="category">
+                                <mat-option *ngFor="let category of categories" [value]="category.categoryName">
+                                    {{category.categoryName}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <button type="button" (click)="onAdd()" mat-icon-button>
+                        <mat-icon>add</mat-icon>
+                    </button>
+                </div>
+
+
+
+                <div>
+                    <mat-form-field>
+                        <input type="number" matInput placeholder="Số lượng" required formControlName="quantity">
+                    </mat-form-field>
+                </div>
+
+                <div>
+                    <mat-form-field>
+                        <input type="number" matInput placeholder="Giá bán" required formControlName="price">
+                    </mat-form-field>
+                </div>
+
+
+
+            </div>
+
+            <div>
+                <div>
+                    <img style="width: 200px; height: 200px;" [src]="url" alt="">
+                </div>
+
+                <div style=" text-align: center; display: block; margin: 0 auto;">
+
+                    <input id="select-img" hidden formControlName="imgPath" (change)="onSelectFile($event)" mat-button type="file"
+                        accept="image/*">
+                        <label  class="mat-focus-indicator mat-button mat-button-base mat-primary" for="select-img">Choose file</label>    
+                        
+
+                </div>
+          
+
+
+            </div>
+        </div>
+        <div>
+
+
+            <mat-form-field style="width: 100%;">
+                <mat-label>Mô tả</mat-label>
+                <textarea formControlName="description" matInput></textarea>
+            </mat-form-field>
+
+        </div>
+        <div>
+            <button color ="primary" type="submit" mat-raised-button>Submit</button>
+        </div>
+
+    </form>
+</div>

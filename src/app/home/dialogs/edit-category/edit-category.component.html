@@ -1,0 +1,25 @@
+<div>
+    <form [formGroup]="form" (ngSubmit)="submit()">
+        <div style="display: flex;">
+            <div>
+                <mat-form-field>
+                    <mat-label>Loại</mat-label>
+                    <mat-select formControlName="category">
+                        <mat-option *ngFor="let category of categories" [value]="category.categoryName">
+                            {{category.categoryName}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <button type="button" (click)="onAdd()" mat-icon-button>
+                <mat-icon>add</mat-icon>
+            </button>
+        </div>
+        
+        <div>
+            <button color ="primary" type="submit" mat-raised-button>Submit</button>
+        </div>
+        
+        
+    </form>
+</div>

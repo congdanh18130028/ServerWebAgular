@@ -1,0 +1,14 @@
+<div>
+    <form [formGroup]="form" (ngSubmit)="submit()">
+        <div>
+            <mat-form-field>
+                <input type="number" matInput placeholder="Số lượng" formControlName="quantity" required>
+            </mat-form-field>
+        </div>
+        <div>
+            <button color ="primary" type="submit" mat-raised-button>Submit</button>
+        </div>
+        
+        
+    </form>
+</div>

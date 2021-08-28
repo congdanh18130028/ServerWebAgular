@@ -1,0 +1,46 @@
+
+.menu{
+    margin-top: 2em;
+    display: block;
+    list-style: none;
+}
+
+.menu li a{
+    display: block;
+    width: 100%;
+    
+}
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+.mat-toolbar {
+    background: #3f51b5 !important;
+    color: #fff !important;
+    height: 3.2rem !important;
+}
+
+/* ///// */
+
+.example-container {
+    width: 100%;
+    height: 100%;
+    
+  }
+  
+  .example-sidenav-content {
+    padding: 5rem;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  
+ 
+  .mat-icon {
+    background: #3f51b5 !important;
+    color: #fff;
+    
+}
+a{
+    text-decoration: none;
+}

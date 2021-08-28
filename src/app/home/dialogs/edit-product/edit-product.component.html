@@ -1,0 +1,81 @@
+<div>
+
+    <div style="display: flex;">
+
+        <div style="margin-right: 1rem;">
+            <table style="width: 500px">
+                <tr>
+                    <th>Tên:</th>
+                    <td>{{product.name}}</td>
+                    <td>
+                        <button (click) = "editName(product.id)"  style="color: #3f51b5;" mat-icon-button>
+                            <mat-icon>edit</mat-icon>
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Loại:</th>
+                    <td>{{product.category}}</td>
+                    <td>
+                        <button (click) = "editCategory(product.id)" style="color: #3f51b5;" mat-icon-button>
+                            <mat-icon>edit</mat-icon>
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Số lượng:</th>
+                    <td>{{product.quantity}}</td>
+                    <td>
+                        <button (click) = "editQuantity(product.id)" style="color: #3f51b5;" mat-icon-button>
+                            <mat-icon>edit</mat-icon>
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Giá bán:</th>
+                    <td>{{product.price}}</td>
+                    <td>
+                        <button  (click) = "editPrice(product.id)" style="color: #3f51b5;" mat-icon-button>
+                            <mat-icon>edit</mat-icon>
+                        </button>
+                    </td>
+                </tr>
+
+            </table>
+
+        </div>
+
+        <div style="display: flex;">
+            <div>
+                <img src={{img}} style="width: 200px; height: 200px;" alt="">
+            </div>
+            <div style="display: flex; justify-content: center; align-items: center;">
+                <button (click) = "editImg(product.id)" style=" color: #3f51b5;" mat-icon-button>
+                    <mat-icon>edit</mat-icon>
+                </button>
+            </div>
+
+        </div>
+    </div>
+    <div>
+        <table>
+            <tr>
+                <th>Mô tả: </th>
+                <td style="width: 90%;">
+                    <div style="width: 700px; height : 150px; overflow: scroll;">
+
+                        {{product.description}}
+
+                    </div>
+                </td>
+                <td>
+                    <button (click) = "editDescription(product.id)" style="color: #3f51b5;" mat-icon-button>
+                        <mat-icon>edit</mat-icon>
+                    </button>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+
+</div>

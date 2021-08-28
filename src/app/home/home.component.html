@@ -1,0 +1,36 @@
+
+<mat-toolbar>
+
+    <mat-icon style="cursor: pointer;" (click)="drawer.toggle()">menu</mat-icon>
+  
+    <span style="margin-left: 0.5rem; font-size: 16px;">Admin ChauDecor</span>
+    
+  </mat-toolbar>
+  
+  
+  
+  <mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+   
+  
+  
+      <mat-list >
+        
+        <a mat-list-item routerLink ="/home" (click)="drawer.toggle()" >Trang chủ</a>
+        <a mat-list-item routerLink ="/home/bills" (click)="drawer.toggle()" >Quản Lý Đơn Hàng</a>
+        <a mat-list-item routerLink ="/home/products" (click)="drawer.toggle()">Quản Lý Sản Phẩm</a>
+        <a mat-list-item routerLink ="/home/users" (click)="drawer.toggle()" >Thông Tin Khách hàng</a>
+        
+      </mat-list>
+   
+  
+    </mat-drawer>
+  
+    <div class="example-sidenav-content">
+  
+      <router-outlet></router-outlet>
+  
+    </div>
+  
+  </mat-drawer-container>
+  

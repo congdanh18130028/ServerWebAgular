@@ -1,0 +1,11 @@
+
+  <div>
+    <mat-form-field>
+    <input matInput required [(ngModel)]="categoryName" placeholder="Loại">
+    </mat-form-field>
+  </div>
+  <div mat-dialog-actions>
+  <button mat-button [mat-dialog-close]>Close</button>
+  <button mat-button [mat-dialog-close] (click) ="add()" >Add</button>
+    
+</div>
